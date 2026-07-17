@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-brand-grey font-sans;
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply text-xs tracking-[0.3em] uppercase text-gray-400 mb-4 font-medium;
+  }
+
+  .section-title {
+    @apply font-slab text-4xl md:text-5xl font-semibold text-brand-black leading-tight;
+  }
+
+  .section-divider {
+    @apply w-16 h-0.5 bg-brand-black;
+  }
+
+  .btn-dark {
+    @apply inline-block px-8 py-4 bg-brand-black text-white font-semibold text-sm tracking-widest uppercase hover:bg-brand-graphite transition-colors duration-300;
+  }
+
+  .btn-ghost-light {
+    @apply inline-block px-8 py-4 border-2 border-white text-white font-semibold text-sm tracking-widest uppercase hover:bg-white hover:text-brand-black transition-colors duration-300;
+  }
+
+  .btn-ghost-dark {
+    @apply inline-block px-8 py-4 border-2 border-brand-black text-brand-black font-semibold text-sm tracking-widest uppercase hover:bg-brand-black hover:text-white transition-colors duration-300;
+  }
+}
