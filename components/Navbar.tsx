@@ -32,17 +32,17 @@ export default function Navbar() {
         scrolled ? 'bg-white shadow-sm' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className={`max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${scrolled ? 'py-1' : 'py-4'}`}>
         {/* Logo */}
         <a href="#" className="block">
-          <div className="bg-white rounded-lg px-2 py-1 shadow-sm">
+          <div className={`bg-white rounded-lg shadow-sm transition-all duration-300 ${scrolled ? 'px-1.5 py-0.5' : 'px-2 py-1'}`}>
             <Image
               src="/logo.jpeg"
               alt="Stuka d'Or"
               width={110}
               height={50}
               unoptimized
-              className="object-contain"
+              className={`object-contain transition-all duration-300 ${scrolled ? 'w-[60px] h-auto' : ''}`}
             />
           </div>
         </a>
